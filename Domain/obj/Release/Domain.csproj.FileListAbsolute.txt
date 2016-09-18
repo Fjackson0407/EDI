@@ -1,0 +1,7 @@
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Domain\bin\Release\Domain.dll
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Domain\bin\Release\Domain.pdb
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Domain\bin\Release\Helpers.dll
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Domain\bin\Release\Helpers.pdb
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Domain\obj\Release\Domain.csprojResolveAssemblyReference.cache
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Domain\obj\Release\Domain.dll
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Domain\obj\Release\Domain.pdb

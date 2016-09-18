@@ -1,0 +1,434 @@
+﻿<Window x:Class="Valid.Fulfillment.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="VALID Fulfillment Client"
+        DataContext="{Binding}"
+        Closing="Event_WindowClosing" 
+        Loaded="MainWindow_OnLoaded"
+        Activated="MainWindow_OnActivated"
+        WindowStartupLocation="CenterScreen"
+        VerticalAlignment="Top">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Color="LightSlateGray"  Offset=".1"></GradientStop>
+            <GradientStop Color="Black"  Offset=".6"></GradientStop>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5,5,5,5">
+                <Button x:Name="Btn_Login" FontSize="20" Height="40" Width="250" Click="Btn_Login_OnClick" Margin="10,0,10,0">Login / Logout</Button>
+                <Label FontSize="20" Foreground="White" Margin="10,0,10,0">Current User :</Label>
+                <Label FontSize="20" Foreground="White" Margin="10,0,10,0" Content="{Binding CurrentUser.UserName}"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Visibility="{Binding LoadButtonVisibility}" Margin="5,5,5,5">
+                <Label FontSize="20" Foreground="White" Margin="15,0,0,0">Start</Label>
+                <DatePicker FontSize="20" Name="Dp_StartDate" VerticalContentAlignment="Center"/>
+                <Label FontSize="20" Foreground="White" Margin="15,0,0,0">End</Label>
+                <DatePicker FontSize="20" Name="Dp_EndDate" VerticalContentAlignment="Center"/>
+                <Button FontSize="20" Name="Btn_Load" Click="Btn_Load_OnClick" Height="40" Width="250" Margin="15,0,0,0">Load</Button>
+            </StackPanel>
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Visibility="{Binding FilterVisibility}">
+                <RadioButton FontSize="20" Name="Rbtn_OpenOders" IsChecked="True" Foreground="White" Height="25" Margin="10,0,5,0" VerticalContentAlignment="Center" Checked="OnStatusChanged" Unchecked="OnStatusChanged">Open</RadioButton>
+                <RadioButton FontSize="20" Name="Rbtn_ClosedOrders" Foreground="White" Height="25" Margin="5,0,5,0" VerticalContentAlignment="Center" Checked="OnStatusChanged" Unchecked="OnStatusChanged">Closed</RadioButton>
+                <RadioButton FontSize="20" Name="Rbtn_AllOrders" Foreground="White" Height="25" Margin="5,0,5,0" VerticalContentAlignment="Center" Checked="OnStatusChanged" Unchecked="OnStatusChanged">All</RadioButton>
+
+                <Label FontSize="20" Foreground="White" Margin="15,0,0,0">Purchase Order</Label>
+                <ComboBox Name="cbox_PurchaseOrders"
+                           FontSize="20"
+                          MinWidth="150" 
+                          ItemsSource="{Binding PurchaseOrderList}" 
+                          DisplayMemberPath="PoNumber" SelectionChanged="Cbox_PurchaseOrders_OnSelectionChanged"/>
+            </StackPanel>
+            <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">-->
+            <TabControl FontSize="20" Name="TabControl" VerticalAlignment="Top" Margin="10,10,10,10" Visibility="{Binding FulfillmentVisibility}">
+
+                <TabItem Name="FulfillmentDetail" Header="Fulfillment Breakdown" VerticalAlignment="Top">
+                    
+                <Grid VerticalAlignment="Top" Background="White" Visibility="{Binding FulfillmentVisibility}" Margin="5,5,5,5">
+                        <StackPanel Orientation="Vertical">
+                            
+                            <Label FontSize="24" FontWeight="Bold">Visa Mastercard</Label>
+                            <DataGrid x:Name="datagrid_VisaMcDetail" 
+                                  ItemsSource="{Binding VisaMcDetailList}"
+                                  CanUserAddRows="False"
+                                  CanUserDeleteRows="False"
+                                  IsReadOnly="True"
+                                  FontSize="20" AutoGenerateColumns="False" SelectionMode="Single"
+                                  AlternatingRowBackground="LightGray" VerticalAlignment="Top" Grid.ColumnSpan="2"
+                                  BorderThickness="0"
+                                  GridLinesVisibility="None"
+                                  MouseDoubleClick="Datagrid_VisaMcDetail_OnMouseDoubleClick"
+                                  VerticalScrollBarVisibility="Visible"
+                                  Height="400">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="DC Number" Binding="{Binding DcNumber}" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Number of Stores" Binding="{Binding StoreCount}" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Number of Packs" Binding="{Binding PackCount}" IsReadOnly="True" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        <Label FontSize="24" FontWeight="Bold">AmericanExpress</Label>
+                            <DataGrid x:Name="datagrid_AmexDetail" 
+                                  ItemsSource="{Binding AmexDetailList}"
+                                  CanUserAddRows="False"
+                                  CanUserDeleteRows="False"
+                                  IsReadOnly="True"
+                                  FontSize="20" AutoGenerateColumns="False" SelectionMode="Single"
+                                  AlternatingRowBackground="LightGray" VerticalAlignment="Top" Grid.ColumnSpan="2"
+                                  BorderThickness="0"
+                                  GridLinesVisibility="None"
+                                  MouseDoubleClick="Datagrid_AmexDetail_OnMouseDoubleClick"
+                                  VerticalScrollBarVisibility="Visible"
+                                  Height="400">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="DC Number" Binding="{Binding DcNumber}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Number of Stores" Binding="{Binding StoreCount}" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Number of Packs" Binding="{Binding PackCount}" IsReadOnly="True" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                    </StackPanel>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Name="Summary" Header="Summary" VerticalAlignment="Top">
+
+                    <Grid VerticalAlignment="Top" Background="White" Visibility="{Binding FulfillmentVisibility}" Margin="5,5,5,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="1" Grid.Row="1" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">Total Orders</Label>
+                        <Label Grid.Column="2" Grid.Row="1" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">Orders Picked</Label>
+                        <Label Grid.Column="3" Grid.Row="1" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">Orders Cancelled</Label>
+                        <Label Grid.Column="4" Grid.Row="1" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">Orders Open</Label>
+
+                        <Label Grid.Column="0" Grid.Row="2" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">Visa / MC</Label>
+                        <Label Grid.Column="0" Grid.Row="3" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">AMEX</Label>
+                        <Label Grid.Column="0" Grid.Row="4" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">Totals</Label>
+
+                        <Label Name="lbl_Summary_VMC_Total" Grid.Column="1" Grid.Row="2" FontSize="20" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SummaryVisaMc.Total}" MouseDoubleClick="VisaMcSummary_OnMouseDoubleClick"></Label>
+                        <Label Name="lbl_Summary_VMC_Picked" Grid.Column="2" Grid.Row="2" FontSize="20" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SummaryVisaMc.Picked}" MouseDoubleClick="VisaMcSummary_OnMouseDoubleClick"></Label>
+                        <Label Name="lbl_Summary_VMC_Cancel" Grid.Column="3" Grid.Row="2" FontSize="20" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SummaryVisaMc.Cancel}" MouseDoubleClick="VisaMcSummary_OnMouseDoubleClick"></Label>
+                        <Label Name="lbl_Summary_VMC_Open" Grid.Column="4" Grid.Row="2" FontSize="20" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SummaryVisaMc.Open}" MouseDoubleClick="VisaMcSummary_OnMouseDoubleClick"></Label>
+
+                        <Label Name="lbl_Summary_Amex_Total" Grid.Column="1" Grid.Row="3" FontSize="20" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SummaryAmex.Total}" MouseDoubleClick="AmexSummary_OnMouseDoubleClick"></Label>
+                        <Label Name="lbl_Summary_Amex_Picked" Grid.Column="2" Grid.Row="3" FontSize="20" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SummaryAmex.Picked}" MouseDoubleClick="AmexSummary_OnMouseDoubleClick"></Label>
+                        <Label Name="lbl_Summary_Amex_Cancel" Grid.Column="3" Grid.Row="3" FontSize="20" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SummaryAmex.Cancel}" MouseDoubleClick="AmexSummary_OnMouseDoubleClick"></Label>
+                        <Label Name="lbl_Summary_Amex_Open" Grid.Column="4" Grid.Row="3" FontSize="20" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SummaryAmex.Open}" MouseDoubleClick="AmexSummary_OnMouseDoubleClick"></Label>
+
+                        <Label Grid.Column="1" Grid.Row="4" FontSize="20" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SummaryTotal.Total}"></Label>
+                        <Label Grid.Column="2" Grid.Row="4" FontSize="20" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SummaryTotal.Picked}"></Label>
+                        <Label Grid.Column="3" Grid.Row="4" FontSize="20" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SummaryTotal.Cancel}"></Label>
+                        <Label Grid.Column="4" Grid.Row="4" FontSize="20" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding SummaryTotal.Open}"></Label>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Name="Details" Header="Raw Data" VerticalAlignment="Top">
+                    <!--<DataGrid x:Name="datagrid_Details" 
+                                  ItemsSource="{Binding MasterOrderDetailList}"
+                                  CanUserAddRows="False"
+                                  CanUserDeleteRows="False"
+                                  IsReadOnly="True"
+                                  FontSize="12" AutoGenerateColumns="True" SelectionMode="Single"
+                                  AlternatingRowBackground="LightGray" VerticalAlignment="Top"
+                                  BorderThickness="0"
+                                  GridLinesVisibility="None">
+                    </DataGrid>-->
+                    <Grid Margin="0,0,0,0" VerticalAlignment="Top">
+                        <ListView Name="ctl_RawDataList"
+                          Grid.Column="0" Grid.Row="0" 
+                          Margin="5,5,5, 5" 
+                          HorizontalAlignment="Left" 
+                          VerticalAlignment="Top"
+                          BorderThickness="0" 
+                          Background="Transparent"
+                          VerticalContentAlignment="Top"
+                          ItemsSource="{Binding MasterOrderDetailList}">
+                            <ListView.View>
+                                <GridView>
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding PONumber}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="PO Number"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding PODate}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="PO Date"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding DCNumber}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="DC Number"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding OrderStoreNumber}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="Store Number"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding DPCI}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="DPCI Number"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding CompanyCode}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="Order Type"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding OriginalLine}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="Line Number"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding SkuItem.Product}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="Sku Description"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding QtyOrdered}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="Qty Ordered"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding BundleQty}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="Bundles Ordered"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding QtyPacked}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="Bundles Packed"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0"
+                                                    Orientation="Vertical">
+                                                    <Expander Header="Column Information">
+                                                        <ListView Name="lstCartons" Margin="5,5, 5, 5" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                                          BorderThickness="0" Background="Transparent"
+                                                          ItemsSource="{Binding}"
+                                                          DataContext="{Binding Carton}">
+                                                            <ListView.View>
+                                                                <GridView>
+                                                                    <GridViewColumn>
+                                                                        <GridViewColumn.CellTemplate>
+                                                                            <DataTemplate>
+                                                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                                                    <TextBlock Text="{Binding Qty}" />
+                                                                                </StackPanel>
+                                                                            </DataTemplate>
+                                                                        </GridViewColumn.CellTemplate>
+                                                                        <GridViewColumn.Header>
+                                                                            <GridViewColumnHeader Content="Qty" HorizontalContentAlignment="Left" />
+                                                                        </GridViewColumn.Header>
+                                                                    </GridViewColumn>
+                                                                    <GridViewColumn>
+                                                                        <GridViewColumn.CellTemplate>
+                                                                            <DataTemplate>
+                                                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                                                    <TextBlock Text="{Binding UCC128}" />
+                                                                                </StackPanel>
+                                                                            </DataTemplate>
+                                                                        </GridViewColumn.CellTemplate>
+                                                                        <GridViewColumn.Header>
+                                                                            <GridViewColumnHeader Content="UCC128" HorizontalContentAlignment="Left" />
+                                                                        </GridViewColumn.Header>
+                                                                    </GridViewColumn>
+                                                                    <GridViewColumn>
+                                                                        <GridViewColumn.CellTemplate>
+                                                                            <DataTemplate>
+                                                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                                                    <TextBlock Text="{Binding Weight}" />
+                                                                                </StackPanel>
+                                                                            </DataTemplate>
+                                                                        </GridViewColumn.CellTemplate>
+                                                                        <GridViewColumn.Header>
+                                                                            <GridViewColumnHeader Content="Weight" HorizontalContentAlignment="Left" />
+                                                                        </GridViewColumn.Header>
+                                                                    </GridViewColumn>
+                                                                </GridView>
+                                                            </ListView.View>
+                                                        </ListView>
+                                                    </Expander>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="Cartons"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,0,0,0"
+                                                    Orientation="Vertical">
+                                                    <Expander Header="Column Information">
+                                                        <ListView Name="lstCartons" 
+                                                          Margin="5,5, 5, 5" 
+                                                          HorizontalAlignment="Left" 
+                                                          VerticalAlignment="Top"
+                                                          BorderThickness="0" 
+                                                          Background="Transparent"
+                                                          ItemsSource="{Binding}"
+                                                          DataContext="{Binding SerialRageNumber}">
+                                                            <ListView.View>
+                                                                <GridView>
+                                                                    <GridViewColumn>
+                                                                        <GridViewColumn.CellTemplate>
+                                                                            <DataTemplate>
+                                                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                                                    <TextBlock Text="{Binding SerialNumber}" />
+                                                                                </StackPanel>
+                                                                            </DataTemplate>
+                                                                        </GridViewColumn.CellTemplate>
+                                                                        <GridViewColumn.Header>
+                                                                            <GridViewColumnHeader Content="Serial Number" HorizontalContentAlignment="Left" />
+                                                                        </GridViewColumn.Header>
+                                                                    </GridViewColumn>
+                                                                    <GridViewColumn>
+                                                                        <GridViewColumn.CellTemplate>
+                                                                            <DataTemplate>
+                                                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                                                    <TextBlock Text="{Binding Serialbundle}" />
+                                                                                </StackPanel>
+                                                                            </DataTemplate>
+                                                                        </GridViewColumn.CellTemplate>
+                                                                        <GridViewColumn.Header>
+                                                                            <GridViewColumnHeader Content="Serial bundle" HorizontalContentAlignment="Left" />
+                                                                        </GridViewColumn.Header>
+                                                                    </GridViewColumn>
+                                                                </GridView>
+                                                            </ListView.View>
+                                                        </ListView>
+                                                    </Expander>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                        <GridViewColumn.Header>
+                                            <GridViewColumnHeader Content="Serial Numbers"/>
+                                        </GridViewColumn.Header>
+                                    </GridViewColumn>
+
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+            <!--</StackPanel>-->
+        </StackPanel>
+        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+            <Image Name="Img_Logo" Loaded="Img_Logo_OnLoaded"  Width="125" Height="25" Stretch="Fill"/>
+        </Grid>
+    </Grid>
+</Window>

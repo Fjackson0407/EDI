@@ -1,0 +1,4 @@
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Helpers\bin\Release\Helpers.dll
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Helpers\bin\Release\Helpers.pdb
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Helpers\obj\Release\Helpers.dll
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Helpers\obj\Release\Helpers.pdb

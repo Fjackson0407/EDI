@@ -1,0 +1,149 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using Domain;
+using Valid.Fulfillment.Common;
+using Valid.Fulfillment.Common.Models;
+using Valid.Fulfillment.Client.ViewModels;
+using Valid.Fulfillment.Client.Views;
+using Valid.Fulfillment.Common.Mappers;
+
+namespace Valid.Fulfillment.Client
+{
+    /// <summary>
+    /// Interaction logic for OrderDetailWindow.xaml
+    /// </summary>
+    public partial class OrderDetailWindow : Window
+    {
+        private OrderDetail_ViewModel _viewModel;
+        private ScannerCapture _scanner;
+        private Mapper _mapper;
+        public Settings AppSettings { get; set; }
+        
+
+        public OrderDetailWindow(Settings settings, IEnumerable<StoreInfoFromEDI850> orderInfoList, string username)
+        {
+            InitializeComponent();
+            _mapper = new Mapper();
+            AppSettings = settings;
+            _viewModel = new OrderDetail_ViewModel(AppSettings, orderInfoList, username);
+            _viewModel.OrderType = _mapper.MapCompanyCodeToOrderType(orderInfoList.FirstOrDefault().CompanyCode).ToString();
+            DataContext = _viewModel;
+
+            tblk_DcId.Text = orderInfoList.FirstOrDefault().DCNumber;
+            tblk_Store.Text = orderInfoList.FirstOrDefault().OrderStoreNumber;
+            tblk_Account.Text = orderInfoList.FirstOrDefault().PONumber;
+        }
+
+        private void Img_Logo_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            // ... Create a new BitmapImage.
+            BitmapImage b = new BitmapImage();
+            b.BeginInit();
+            b.UriSource = new Uri(@AppSettings.ImageUri);
+            b.EndInit();
+
+            // ... Get Image reference from sender.
+            var image = sender as Image;
+            // ... Assign Source.
+            image.Source = b;
+        }
+
+        private void OrderDetailWindow_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            if (_scanner == null)
+            {
+                _scanner = new ScannerCapture(this, 100,
+                    EScannerCaptureUnprintableCharacters.STX,
+                    EScannerCaptureUnprintableCharacters.EOT);
+
+
+                _scanner.ScanComplete += ScanComplete;
+                _scanner.ScanError += ScanError;
+                _scanner.Enabled = true;
+            }
+        }
+
+        private void OrderDetailWindow_OnUnloaded(object sender, RoutedEventArgs e)
+        {
+            if (_scanner != null)
+            {
+                _scanner.Enabled = false;
+            }
+        }
+
+        private void ScanError(string errorMessage)
+        {
+            //Note: Add error message popup here
+        }
+
+        private void ScanComplete(string scanValue)
+        {
+            switch (scanValue.Length)
+            {
+                case 21:
+                    if (datagrid_OrderDetail.SelectedItem != null)
+                    {
+                        if (_viewModel.SerialRangeIsAvailable(_viewModel.SerialRangeToSerialList(scanValue)))
+                        {
+                            _viewModel.AddSerialRange(scanValue, ((StoreInfoFromEDI850) datagrid_OrderDetail.SelectedItem));
+                        }
+                    }
+                    break;
+            }
+        }
+
+        private void Btn_Cancel_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Btn_Reprint_OnClick(object sender, RoutedEventArgs e)
+        {
+            _viewModel.PrintCartonLabel();
+        }
+
+        private void Btn_Print_OnClick(object sender, RoutedEventArgs e)
+        {
+            _viewModel.PrintCartonLabel();
+            _viewModel.UpdateOrders();
+        }
+
+        private void Datagrid_OrderDetail_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (datagrid_OrderDetail.SelectedItem != null)
+            {
+                _viewModel.LoadSerialRangeView(((StoreInfoFromEDI850) datagrid_OrderDetail.SelectedItem).Id);
+            }
+        }
+
+        private void MenuItem_DeleteRow_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (datagrid_SerialRangeList.SelectedItem != null)
+            {
+                var serialRange = ((SerialRange)datagrid_SerialRangeList.SelectedItem);
+                _viewModel.RemoveSerialRange(serialRange);
+            }
+        }
+
+        private void MenuItem_AddRow_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (datagrid_OrderDetail.SelectedItem != null)
+            {
+                var prompt = new SerialRangePrompt();
+                prompt.ShowDialog();
+                if (prompt.OkBtnPressed)
+                {
+                    var value = string.Format("{0}-{1}", prompt.TboxStart.Text, prompt.TboxEnd.Text);
+                    if (_viewModel.SerialRangeIsAvailable(_viewModel.SerialRangeToSerialList(value)))
+                    {
+                        _viewModel.AddSerialRange(value, ((StoreInfoFromEDI850)datagrid_OrderDetail.SelectedItem));
+                    }
+                }
+            }
+        }
+    }
+}

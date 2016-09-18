@@ -1,0 +1,14 @@
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\bin\Release\Repository.dll.config
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\bin\Release\Repository.dll
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\bin\Release\Repository.pdb
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\bin\Release\Domain.dll
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\bin\Release\EntityFramework.dll
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\bin\Release\Helpers.dll
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\bin\Release\Domain.pdb
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\bin\Release\Helpers.pdb
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\bin\Release\EntityFramework.xml
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\obj\Release\Repository.csprojResolveAssemblyReference.cache
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\obj\Release\Repository.dll
+C:\Users\VM User\Dropbox\Valid.Fulfillment.Client\Repository\obj\Release\Repository.pdb

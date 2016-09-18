@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbols LinesOfCode="766" PostSharpLinesOfCode="0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+  <Class Class="#1=T:[Valid.Fulfillment.PostSharp]Valid.Fulfillment.PostSharp.LogException">
+    <Instance Declaration="#2=A:Valid.Fulfillment.Common" Id="be52773d552c9cbb">
+      <Target Target="#3=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::add_ScanBegin([Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture+ScanBeginHandler)">
+        <JoinPoint Advising="#1" Description="#4=Wrapped by advice(s) OnException" Ordinal="0" />
+      </Target>
+      <Target Target="#5=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::remove_ScanBegin([Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture+ScanBeginHandler)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="2" />
+      </Target>
+      <Target Target="#6=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::add_ScanComplete([Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture+ScanCompleteHandler)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="4" />
+      </Target>
+      <Target Target="#7=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::remove_ScanComplete([Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture+ScanCompleteHandler)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="6" />
+      </Target>
+      <Target Target="#8=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::add_ScanError([Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture+ScanErrorHandler)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="8" />
+      </Target>
+      <Target Target="#9=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::remove_ScanError([Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture+ScanErrorHandler)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="10" />
+      </Target>
+      <Target Target="#10=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::#ctor(System.Windows.Window, System.Int16, System.Char, System.Char, System.Int16[])">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="12" />
+      </Target>
+      <Target Target="#11=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::#ctor(System.Windows.Window, System.Int16, [Valid.Fulfillment.Common]Valid.Fulfillment.Common.EScannerCaptureUnprintableCharacters, [Valid.Fulfillment.Common]Valid.Fulfillment.Common.EScannerCaptureUnprintableCharacters, System.Int16[])">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="14" />
+      </Target>
+      <Target Target="#12=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::#ctor(System.Windows.Window, System.Int16, System.Int32, System.Int32, System.Int16[])">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="16" />
+      </Target>
+      <Target Target="#13=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::#ctor(System.Windows.Controls.UserControl, System.Int16, [Valid.Fulfillment.Common]Valid.Fulfillment.Common.EScannerCaptureUnprintableCharacters, [Valid.Fulfillment.Common]Valid.Fulfillment.Common.EScannerCaptureUnprintableCharacters, System.Int16[])">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="18" />
+      </Target>
+      <Target Target="#14=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::get_Enabled()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="20" />
+      </Target>
+      <Target Target="#15=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::set_Enabled(System.Boolean)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="21" />
+      </Target>
+      <Target Target="#16=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::get_ScanningHasBegun()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="22" />
+      </Target>
+      <Target Target="#17=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::PreviewTextInput(System.Object, System.Windows.Input.TextCompositionEventArgs)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="23" />
+      </Target>
+      <Target Target="#18=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::Clear()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="25" />
+      </Target>
+      <Target Target="#19=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::IsScanPrefix(System.Windows.Input.TextCompositionEventArgs)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="27" />
+      </Target>
+      <Target Target="#20=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::CharacterWasAddedToScanValue(System.Windows.Input.TextCompositionEventArgs)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="29" />
+      </Target>
+      <Target Target="#21=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::IsScanSuffix(System.Windows.Input.TextCompositionEventArgs)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="31" />
+      </Target>
+      <Target Target="#22=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::IsScanCharacterASCIICode(System.Windows.Input.TextCompositionEventArgs, System.Nullable{System.Int32})">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="33" />
+      </Target>
+      <Target Target="#23=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::CharacterWasEnteredWithinMaximumMilliseconds()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="35" />
+      </Target>
+      <Target Target="#24=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCapture::DateDifferenceInMilliseconds(System.DateTime, System.Nullable{[mscorlib]System.DateTime})">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="37" />
+      </Target>
+      <Target Target="#25=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCaptureException::#ctor()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="39" />
+      </Target>
+      <Target Target="#26=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.ScannerCaptureException::#ctor(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="41" />
+      </Target>
+      <Target Target="#27=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_OrderDetailId()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="43" />
+      </Target>
+      <Target Target="#28=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_OrderDetailId(System.Guid)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="44" />
+      </Target>
+      <Target Target="#29=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_OrderDate()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="45" />
+      </Target>
+      <Target Target="#30=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_OrderDate(System.DateTime)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="46" />
+      </Target>
+      <Target Target="#31=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_LineNumber()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="47" />
+      </Target>
+      <Target Target="#32=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_LineNumber(System.Int32)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="48" />
+      </Target>
+      <Target Target="#33=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_BundleQty()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="49" />
+      </Target>
+      <Target Target="#34=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_BundleQty(System.Int32)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="50" />
+      </Target>
+      <Target Target="#35=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_DPCI()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="51" />
+      </Target>
+      <Target Target="#36=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_DPCI(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="52" />
+      </Target>
+      <Target Target="#37=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_PoNumber()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="53" />
+      </Target>
+      <Target Target="#38=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_PoNumber(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="54" />
+      </Target>
+      <Target Target="#39=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_OrderType()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="55" />
+      </Target>
+      <Target Target="#40=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_OrderType(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="56" />
+      </Target>
+      <Target Target="#41=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_OrderTypeDescription()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="57" />
+      </Target>
+      <Target Target="#42=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_OrderQty()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="58" />
+      </Target>
+      <Target Target="#43=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_OrderQty(System.Int32)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="59" />
+      </Target>
+      <Target Target="#44=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_DcNumber()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="60" />
+      </Target>
+      <Target Target="#45=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_DcNumber(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="61" />
+      </Target>
+      <Target Target="#46=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_ItemDescription()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="62" />
+      </Target>
+      <Target Target="#47=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_ItemDescription(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="63" />
+      </Target>
+      <Target Target="#48=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_Upc()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="64" />
+      </Target>
+      <Target Target="#49=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_Upc(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="65" />
+      </Target>
+      <Target Target="#50=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_PackedQty()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="66" />
+      </Target>
+      <Target Target="#51=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_PackedQty(System.Int32)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="67" />
+      </Target>
+      <Target Target="#52=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_OrderStatus()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="68" />
+      </Target>
+      <Target Target="#53=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_OrderStatus(System.Int32)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="69" />
+      </Target>
+      <Target Target="#54=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_OrderStatusDescription()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="70" />
+      </Target>
+      <Target Target="#55=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_StoreNumber()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="71" />
+      </Target>
+      <Target Target="#56=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_StoreNumber(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="72" />
+      </Target>
+      <Target Target="#57=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::get_StoreInfoFromEDI850Fk()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="73" />
+      </Target>
+      <Target Target="#58=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::set_StoreInfoFromEDI850Fk(System.Guid)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="74" />
+      </Target>
+      <Target Target="#59=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::add_PropertyChanged(System.ComponentModel.PropertyChangedEventHandler)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="75" />
+      </Target>
+      <Target Target="#60=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::remove_PropertyChanged(System.ComponentModel.PropertyChangedEventHandler)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="77" />
+      </Target>
+      <Target Target="#61=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::OnPropertyChanged(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="79" />
+      </Target>
+      <Target Target="#62=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::SetField{T}(ref T, T, System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="81" />
+      </Target>
+      <Target Target="#63=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderInfo::#ctor()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="83" />
+      </Target>
+      <Target Target="#64=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.SerialRange::get_ID()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="85" />
+      </Target>
+      <Target Target="#65=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.SerialRange::set_ID(System.Nullable{[mscorlib]System.Guid})">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="86" />
+      </Target>
+      <Target Target="#66=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.SerialRange::get_StoreInfoFromEDI850Fk()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="87" />
+      </Target>
+      <Target Target="#67=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.SerialRange::set_StoreInfoFromEDI850Fk(System.Guid)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="88" />
+      </Target>
+      <Target Target="#68=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.SerialRange::get_SerialNumber()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="89" />
+      </Target>
+      <Target Target="#69=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.SerialRange::set_SerialNumber(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="90" />
+      </Target>
+      <Target Target="#70=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.SerialRange::get_SerialBundle()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="91" />
+      </Target>
+      <Target Target="#71=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.SerialRange::set_SerialBundle(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="92" />
+      </Target>
+      <Target Target="#72=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.SerialRange::#ctor()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="93" />
+      </Target>
+      <Target Target="#73=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.Settings::#ctor(System.Collections.Generic.Dictionary{System.String,System.String})">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="95" />
+      </Target>
+      <Target Target="#74=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.Settings::get_ConnectionString()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="97" />
+      </Target>
+      <Target Target="#75=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.Settings::get_ImageUri()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="98" />
+      </Target>
+      <Target Target="#76=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.Settings::get_PrintPath()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="99" />
+      </Target>
+      <Target Target="#77=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.Settings::get_PrintFileName()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="100" />
+      </Target>
+      <Target Target="#78=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.StoreDetailGrid::get_DcNumber()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="101" />
+      </Target>
+      <Target Target="#79=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.StoreDetailGrid::set_DcNumber(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="102" />
+      </Target>
+      <Target Target="#80=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.StoreDetailGrid::get_StoreFk()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="103" />
+      </Target>
+      <Target Target="#81=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.StoreDetailGrid::set_StoreFk(System.Guid)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="104" />
+      </Target>
+      <Target Target="#82=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.StoreDetailGrid::get_StoreNumber()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="105" />
+      </Target>
+      <Target Target="#83=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.StoreDetailGrid::set_StoreNumber(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="106" />
+      </Target>
+      <Target Target="#84=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.StoreDetailGrid::get_OrderQty()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="107" />
+      </Target>
+      <Target Target="#85=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.StoreDetailGrid::set_OrderQty(System.Int32)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="108" />
+      </Target>
+      <Target Target="#86=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.StoreDetailGrid::get_OrderStatusDescription()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="109" />
+      </Target>
+      <Target Target="#87=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.StoreDetailGrid::set_OrderStatusDescription(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="110" />
+      </Target>
+      <Target Target="#88=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.StoreDetailGrid::#ctor()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="111" />
+      </Target>
+      <Target Target="#89=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.FulfillmentBreakdown::get_DcNumber()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="113" />
+      </Target>
+      <Target Target="#90=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.FulfillmentBreakdown::set_DcNumber(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="114" />
+      </Target>
+      <Target Target="#91=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.FulfillmentBreakdown::get_StoreCount()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="115" />
+      </Target>
+      <Target Target="#92=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.FulfillmentBreakdown::set_StoreCount(System.Int32)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="116" />
+      </Target>
+      <Target Target="#93=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.FulfillmentBreakdown::get_PackCount()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="117" />
+      </Target>
+      <Target Target="#94=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.FulfillmentBreakdown::set_PackCount(System.Int32)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="118" />
+      </Target>
+      <Target Target="#95=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.FulfillmentBreakdown::#ctor()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="119" />
+      </Target>
+      <Target Target="#96=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::get_CustomerLineNumber()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="121" />
+      </Target>
+      <Target Target="#97=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::set_CustomerLineNumber(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="122" />
+      </Target>
+      <Target Target="#98=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::get_UOM()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="123" />
+      </Target>
+      <Target Target="#99=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::set_UOM(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="124" />
+      </Target>
+      <Target Target="#100=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::get_QtyOrdered()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="125" />
+      </Target>
+      <Target Target="#101=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::set_QtyOrdered(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="126" />
+      </Target>
+      <Target Target="#102=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::get_PackSize()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="127" />
+      </Target>
+      <Target Target="#103=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::set_PackSize(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="128" />
+      </Target>
+      <Target Target="#104=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::get_ItemDescription()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="129" />
+      </Target>
+      <Target Target="#105=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::set_ItemDescription(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="130" />
+      </Target>
+      <Target Target="#106=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::get_QtyPacksNeeded()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="131" />
+      </Target>
+      <Target Target="#107=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::set_QtyPacksNeeded(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="132" />
+      </Target>
+      <Target Target="#108=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::get_ProductUPC()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="133" />
+      </Target>
+      <Target Target="#109=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::set_ProductUPC(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="134" />
+      </Target>
+      <Target Target="#110=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::get_SerialRanges()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="135" />
+      </Target>
+      <Target Target="#111=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::set_SerialRanges(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="136" />
+      </Target>
+      <Target Target="#112=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::get_QtyPacked()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="137" />
+      </Target>
+      <Target Target="#113=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::set_QtyPacked(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="138" />
+      </Target>
+      <Target Target="#114=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::get_StoreorderDetailFk()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="139" />
+      </Target>
+      <Target Target="#115=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::set_StoreorderDetailFk(System.Guid)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="140" />
+      </Target>
+      <Target Target="#116=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderDetailGrid::#ctor()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="141" />
+      </Target>
+      <Target Target="#117=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::get_Total()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="143" />
+      </Target>
+      <Target Target="#118=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::set_Total(System.Int32)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="144" />
+      </Target>
+      <Target Target="#119=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::get_Picked()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="145" />
+      </Target>
+      <Target Target="#120=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::set_Picked(System.Int32)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="146" />
+      </Target>
+      <Target Target="#121=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::get_Cancel()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="147" />
+      </Target>
+      <Target Target="#122=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::set_Cancel(System.Int32)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="148" />
+      </Target>
+      <Target Target="#123=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::get_Open()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="149" />
+      </Target>
+      <Target Target="#124=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::set_Open(System.Int32)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="150" />
+      </Target>
+      <Target Target="#125=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::add_PropertyChanged(System.ComponentModel.PropertyChangedEventHandler)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="151" />
+      </Target>
+      <Target Target="#126=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::remove_PropertyChanged(System.ComponentModel.PropertyChangedEventHandler)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="153" />
+      </Target>
+      <Target Target="#127=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::OnPropertyChanged(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="155" />
+      </Target>
+      <Target Target="#128=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::SetField{T}(ref T, T, System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="157" />
+      </Target>
+      <Target Target="#129=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.OrderSummary::#ctor()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="159" />
+      </Target>
+      <Target Target="#130=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::get_Id()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="161" />
+      </Target>
+      <Target Target="#131=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::set_Id(System.Guid)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="162" />
+      </Target>
+      <Target Target="#132=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::get_Addreess()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="163" />
+      </Target>
+      <Target Target="#133=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::set_Addreess(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="164" />
+      </Target>
+      <Target Target="#134=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::get_City()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="165" />
+      </Target>
+      <Target Target="#135=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::set_City(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="166" />
+      </Target>
+      <Target Target="#136=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::get_State()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="167" />
+      </Target>
+      <Target Target="#137=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::set_State(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="168" />
+      </Target>
+      <Target Target="#138=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::get_PostalCode()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="169" />
+      </Target>
+      <Target Target="#139=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::set_PostalCode(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="170" />
+      </Target>
+      <Target Target="#140=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::get_BillAndShipToCodes()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="171" />
+      </Target>
+      <Target Target="#141=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::set_BillAndShipToCodes(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="172" />
+      </Target>
+      <Target Target="#142=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::get_StoreID()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="173" />
+      </Target>
+      <Target Target="#143=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::set_StoreID(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="174" />
+      </Target>
+      <Target Target="#144=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.DCInformation::#ctor()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="175" />
+      </Target>
+      <Target Target="#145=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.UserInfo::get_UserName()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="177" />
+      </Target>
+      <Target Target="#146=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.UserInfo::set_UserName(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="178" />
+      </Target>
+      <Target Target="#147=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.UserInfo::get_Password()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="179" />
+      </Target>
+      <Target Target="#148=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.UserInfo::set_Password(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="180" />
+      </Target>
+      <Target Target="#149=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Models.UserInfo::#ctor()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="181" />
+      </Target>
+      <Target Target="#150=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.MCLabel.MCLabel::get_FilePath()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="183" />
+      </Target>
+      <Target Target="#151=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.MCLabel.MCLabel::set_FilePath(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="184" />
+      </Target>
+      <Target Target="#152=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.MCLabel.MCLabel::get_ConnectionString()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="185" />
+      </Target>
+      <Target Target="#153=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.MCLabel.MCLabel::set_ConnectionString(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="186" />
+      </Target>
+      <Target Target="#154=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.MCLabel.MCLabel::get_NewLabelFile()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="187" />
+      </Target>
+      <Target Target="#155=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.MCLabel.MCLabel::set_NewLabelFile(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="188" />
+      </Target>
+      <Target Target="#156=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.MCLabel.MCLabel::#ctor(System.String, System.String, System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="189" />
+      </Target>
+      <Target Target="#157=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.MCLabel.MCLabel::SavetoFile(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="191" />
+      </Target>
+      <Target Target="#158=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.MCLabel.MCLabel::ConvertToString(System.Collections.Generic.List{[Domain]Domain.Label})">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="193" />
+      </Target>
+      <Target Target="#159=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Mappers.Mapper::MapFulfillmentBreakdownList(System.Collections.Generic.IEnumerable{[Domain]Domain.StoreInfoFromEDI850})">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="195" />
+      </Target>
+      <Target Target="#160=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Mappers.Mapper::MapSummary(System.Collections.Generic.IEnumerable{[Domain]Domain.StoreInfoFromEDI850})">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="197" />
+      </Target>
+      <Target Target="#161=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Mappers.Mapper::MapStoreDetailList(System.Collections.Generic.IEnumerable{[Domain]Domain.StoreInfoFromEDI850})">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="199" />
+      </Target>
+      <Target Target="#162=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Mappers.Mapper::MapOrderDetailgrid(System.Collections.Generic.IEnumerable{[Domain]Domain.StoreInfoFromEDI850})">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="201" />
+      </Target>
+      <Target Target="#163=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Mappers.Mapper::MapSerialRange(Domain.SerialRageNumber)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="203" />
+      </Target>
+      <Target Target="#164=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Mappers.Mapper::MapCompanyCodeToOrderType(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="205" />
+      </Target>
+      <Target Target="#165=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Mappers.Mapper::MapStoreTolabel(Domain.StoreInfoFromEDI850, Domain.DCInformation, Domain.ShipFromInformation)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="207" />
+      </Target>
+      <Target Target="#166=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Mappers.Mapper::#ctor()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="209" />
+      </Target>
+      <Target Target="#167=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Registry.Registry::get_HSA()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="211" />
+      </Target>
+      <Target Target="#168=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Registry.Registry::get_ConnectionString()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="212" />
+      </Target>
+      <Target Target="#169=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Registry.Registry::get_GetInboundLocation()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="213" />
+      </Target>
+      <Target Target="#170=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Registry.Registry::GetUsernameAmdPassword()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="214" />
+      </Target>
+      <Target Target="#171=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.Registry.Registry::#ctor()">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="216" />
+      </Target>
+      <Target Target="#172=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.EDIException.ExceptionsEDI::#ctor(System.String, System.Exception)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="218" />
+      </Target>
+      <Target Target="#173=M:[Valid.Fulfillment.Common]Valid.Fulfillment.Common.EDIException.ExceptionsEDI::#ctor(System.String)">
+        <JoinPoint Advising="#1" Description="#4" Ordinal="220" />
+      </Target>
+    </Instance>
+  </Class>
+  <Class Class="#174=T:[Valid.Fulfillment.PostSharp]Valid.Fulfillment.PostSharp.LogTrace">
+    <Instance Declaration="#2" Id="be52773d4f8c576b">
+      <Target Target="#3">
+        <JoinPoint Advising="#174" Description="#175=Wrapped by advice(s) OnEntry, OnSuccess, OnException, OnExit" />
+      </Target>
+      <Target Target="#5">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="3" />
+      </Target>
+      <Target Target="#6">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="5" />
+      </Target>
+      <Target Target="#7">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="7" />
+      </Target>
+      <Target Target="#8">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="9" />
+      </Target>
+      <Target Target="#9">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="11" />
+      </Target>
+      <Target Target="#10">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="13" />
+      </Target>
+      <Target Target="#11">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="15" />
+      </Target>
+      <Target Target="#12">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="17" />
+      </Target>
+      <Target Target="#13">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="19" />
+      </Target>
+      <Target Target="#17">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="24" />
+      </Target>
+      <Target Target="#18">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="26" />
+      </Target>
+      <Target Target="#19">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="28" />
+      </Target>
+      <Target Target="#20">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="30" />
+      </Target>
+      <Target Target="#21">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="32" />
+      </Target>
+      <Target Target="#22">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="34" />
+      </Target>
+      <Target Target="#23">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="36" />
+      </Target>
+      <Target Target="#24">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="38" />
+      </Target>
+      <Target Target="#25">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="40" />
+      </Target>
+      <Target Target="#26">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="42" />
+      </Target>
+      <Target Target="#59">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="76" />
+      </Target>
+      <Target Target="#60">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="78" />
+      </Target>
+      <Target Target="#61">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="80" />
+      </Target>
+      <Target Target="#62">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="82" />
+      </Target>
+      <Target Target="#63">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="84" />
+      </Target>
+      <Target Target="#72">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="94" />
+      </Target>
+      <Target Target="#73">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="96" />
+      </Target>
+      <Target Target="#88">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="112" />
+      </Target>
+      <Target Target="#95">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="120" />
+      </Target>
+      <Target Target="#116">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="142" />
+      </Target>
+      <Target Target="#125">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="152" />
+      </Target>
+      <Target Target="#126">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="154" />
+      </Target>
+      <Target Target="#127">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="156" />
+      </Target>
+      <Target Target="#128">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="158" />
+      </Target>
+      <Target Target="#129">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="160" />
+      </Target>
+      <Target Target="#144">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="176" />
+      </Target>
+      <Target Target="#149">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="182" />
+      </Target>
+      <Target Target="#156">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="190" />
+      </Target>
+      <Target Target="#157">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="192" />
+      </Target>
+      <Target Target="#158">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="194" />
+      </Target>
+      <Target Target="#159">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="196" />
+      </Target>
+      <Target Target="#160">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="198" />
+      </Target>
+      <Target Target="#161">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="200" />
+      </Target>
+      <Target Target="#162">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="202" />
+      </Target>
+      <Target Target="#163">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="204" />
+      </Target>
+      <Target Target="#164">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="206" />
+      </Target>
+      <Target Target="#165">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="208" />
+      </Target>
+      <Target Target="#166">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="210" />
+      </Target>
+      <Target Target="#170">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="215" />
+      </Target>
+      <Target Target="#171">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="217" />
+      </Target>
+      <Target Target="#172">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="219" />
+      </Target>
+      <Target Target="#173">
+        <JoinPoint Advising="#174" Description="#175" Ordinal="221" />
+      </Target>
+    </Instance>
+  </Class>
+  <Annotation Target="#176=M:[Valid.Fulfillment.PostSharp]Valid.Fulfillment.PostSharp.LogException::OnException(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#177=2" Description="#178=PostSharp estimates that 2 line(s) of code are saved every time this advice is applied. Use the [LinesOfCodeAvoided] attribute on the aspect or specify the LinesOfCodeAvoided property on the advice attribute to override this value." />
+  <Annotation Target="#179=M:[Valid.Fulfillment.PostSharp]Valid.Fulfillment.PostSharp.LogTrace::OnEntry(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#177" Description="#178" />
+  <Annotation Target="#180=M:[PostSharp]PostSharp.Aspects.OnMethodBoundaryAspect::OnSuccess([PostSharp]PostSharp.Aspects.MethodExecutionArgs)" Arguments="#177" Description="#178" />
+  <Annotation Target="#181=M:[Valid.Fulfillment.PostSharp]Valid.Fulfillment.PostSharp.LogTrace::OnExit(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#177" Description="#178" />
+  <Annotation Target="#182=M:[PostSharp]PostSharp.Aspects.OnMethodBoundaryAspect::OnException([PostSharp]PostSharp.Aspects.MethodExecutionArgs)" Arguments="#177" Description="#178" />
+</Symbols>

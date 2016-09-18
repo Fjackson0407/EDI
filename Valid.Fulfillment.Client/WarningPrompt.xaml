@@ -1,0 +1,36 @@
+﻿<Window x:Class="Valid.Fulfillment.Client.Views.WarningPrompt"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Topmost="True" 
+    HorizontalAlignment="Center" VerticalAlignment="Center"  
+    MinWidth="300" MinHeight="150"  
+    ShowInTaskbar="False"  
+    SizeToContent="WidthAndHeight"  
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="ToolWindow"
+    DataContext="{Binding}"
+        Name="Window_Prompt">
+
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Color="#cedbe3" Offset=".1"></GradientStop>
+            <GradientStop Color="White" Offset=".6"></GradientStop>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid Margin="25,10,25,10">
+        <StackPanel Margin="5, 5, 5, 5" Orientation="Vertical">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Label Name="LblMessage" FontSize="16" FontWeight="Bold" Height="30" Margin="10,10,10,10" Content="Your Message Goes Here"/>
+            </StackPanel>
+            <Label Height="10"></Label>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button Name="BtnOk" 
+                        FontSize="16" Height="30" Width="75" 
+                        Click="BtnOk_Click"
+                        >OK</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
+
