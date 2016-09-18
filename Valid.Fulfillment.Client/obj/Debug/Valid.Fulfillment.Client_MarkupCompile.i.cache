@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Cisco\Dropbox\Client code\Valid.Fulfillment.Client\Valid.Fulfillment.Client\obj\Debug\
+C:\Users\Cisco\Dropbox\Client code\EDI\Valid.Fulfillment.Client\obj\Debug\
 Valid.Fulfillment.Client
 none
 false
 DEBUG;TRACE
-C:\Users\Cisco\Dropbox\Client code\Valid.Fulfillment.Client\Valid.Fulfillment.Client\App.xaml
+C:\Users\Cisco\Dropbox\Client code\EDI\Valid.Fulfillment.Client\App.xaml
 62106271406
 
 191580300369
-261025942805
+26831234759
 Views\MainWindow.xaml;Views\OrderDetailWindow.xaml;Views\SerialRangePrompt.xaml;Views\StoreDetailWindow.xaml;Views\UserLoginWindow.xaml;Views\WarningPrompt.xaml;
 
 True

@@ -364,3 +364,6 @@ C:\Users\Cisco\Dropbox\Client code\Valid.Fulfillment.Client\Valid.Fulfillment.Cl
 C:\Users\Cisco\Dropbox\Client code\Valid.Fulfillment.Client\Valid.Fulfillment.Client\obj\Debug\Valid.Fulfillment.Client.csproj.GenerateResource.Cache
 C:\Users\Cisco\Dropbox\Client code\Valid.Fulfillment.Client\Valid.Fulfillment.Client\obj\Debug\Valid.Fulfillment.Client.exe.postsharp
 C:\Users\Cisco\Dropbox\Client code\Valid.Fulfillment.Client\Valid.Fulfillment.Client\obj\Debug\PostSharpHost.config
+C:\Users\Cisco\Dropbox\Client code\EDI\Valid.Fulfillment.Client\bin\Debug\Valid.Fulfillment.Client.exe.config
+C:\Users\Cisco\Dropbox\Client code\EDI\Valid.Fulfillment.Client\obj\Debug\Valid.Fulfillment.Client.exe
+C:\Users\Cisco\Dropbox\Client code\EDI\Valid.Fulfillment.Client\obj\Debug\Valid.Fulfillment.Client.pdb
